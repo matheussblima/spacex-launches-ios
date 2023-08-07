@@ -8,4 +8,5 @@ target 'SpaceX Launches' do
   # Pods for SpaceX Launches
   pod 'Alamofire'
   pod 'SkeletonView'
+  pod 'SDWebImage'
 end
