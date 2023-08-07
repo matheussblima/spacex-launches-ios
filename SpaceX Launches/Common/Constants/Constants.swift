@@ -8,6 +8,7 @@
 import Foundation
 
 struct Constants {
+    static let appName = "SpaceX Launches"
     struct API {
        static let baseUrl = "https://api.spacexdata.com/v3"
        static var launches = "\(baseUrl)/launches"
