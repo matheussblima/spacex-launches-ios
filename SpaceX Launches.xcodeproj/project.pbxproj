@@ -18,6 +18,7 @@
 		F9C335462A7F1B2400152423 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335452A7F1B2400152423 /* Constants.swift */; };
 		F9C335482A7F946A00152423 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335472A7F946A00152423 /* DataError.swift */; };
 		F9C3354A2A7FAFB100152423 /* LaunchMapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335492A7FAFB100152423 /* LaunchMapped.swift */; };
+		F9C335512A817BD300152423 /* LaunchesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335502A817BD300152423 /* LaunchesCellView.swift */; };
 		F9DC9DCB2A7ED0F200164E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC9DCA2A7ED0F200164E34 /* AppDelegate.swift */; };
 		F9DC9DCD2A7ED0F200164E34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC9DCC2A7ED0F200164E34 /* SceneDelegate.swift */; };
 		F9DC9DCF2A7ED0F200164E34 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC9DCE2A7ED0F200164E34 /* LaunchesViewController.swift */; };
@@ -39,6 +40,7 @@
 		F9C335452A7F1B2400152423 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F9C335472A7F946A00152423 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		F9C335492A7FAFB100152423 /* LaunchMapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMapped.swift; sourceTree = "<group>"; };
+		F9C335502A817BD300152423 /* LaunchesCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchesCellView.swift; sourceTree = "<group>"; };
 		F9DC9DC72A7ED0F200164E34 /* SpaceX Launches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Launches.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DC9DCA2A7ED0F200164E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9DC9DCC2A7ED0F200164E34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 				F882207A7DD6E7F65EC078E5 /* Pods-SpaceX Launches.debug.xcconfig */,
 				162896928D687880642C0647 /* Pods-SpaceX Launches.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +105,7 @@
 		F9C3352E2A7EF6CC00152423 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9C335502A817BD300152423 /* LaunchesCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +302,7 @@
 				F9C335362A7F03F000152423 /* LaunchesRouter.swift in Sources */,
 				F9DC9DCB2A7ED0F200164E34 /* AppDelegate.swift in Sources */,
 				F9C3353A2A7F044F00152423 /* LaunchesInteractor.swift in Sources */,
+				F9C335512A817BD300152423 /* LaunchesCellView.swift in Sources */,
 				F9DC9DCD2A7ED0F200164E34 /* SceneDelegate.swift in Sources */,
 				F9C335382A7F041800152423 /* LaunchesPresenter.swift in Sources */,
 			);
