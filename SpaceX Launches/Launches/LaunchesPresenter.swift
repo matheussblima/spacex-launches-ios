@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol LaunchesPresenterProtocol {
+    func showResults(_ launches: LaunchesModel.FetchLaunches.Response)
+}
+
 class LaunchesPresenter {
     var viewController: LaunchesViewControllerProtocol!
     

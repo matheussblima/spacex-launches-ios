@@ -27,19 +27,3 @@ class LaunchesConfigurator {
     }
 }
 
-protocol LaunchesViewControllerProtocol {
-    func showLaunces(_ launches: LaunchesModel.FetchLaunches.ViewModel)
-}
-
-protocol LaunchesInteractorProtocol {
-    func getLaunches()
-}
-
-protocol LaunchesPresenterProtocol {
-    func showResults(_ launches: LaunchesModel.FetchLaunches.Response)
-}
-
-protocol LaunchesRouterProtocol {
-    func goToLaunch()
-}
-

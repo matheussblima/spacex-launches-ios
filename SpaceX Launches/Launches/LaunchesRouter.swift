@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol LaunchesRouterProtocol {
+    func goToLaunch()
+}
+
 class LaunchesRouter {
     weak var viewController: LaunchesViewController!
 }

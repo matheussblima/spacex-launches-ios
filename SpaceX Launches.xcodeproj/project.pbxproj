@@ -27,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		53A49507B22493CF4A400B4C /* Pods_SpaceX_Launches.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX_Launches.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		769B6335C4DCB88CABC8D370 /* Pods-SpaceX Launches.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX Launches.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX Launches/Pods-SpaceX Launches.debug.xcconfig"; sourceTree = "<group>"; };
 		F9C335322A7EF81C00152423 /* LaunchesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesConfigurator.swift; sourceTree = "<group>"; };
 		F9C335352A7F03F000152423 /* LaunchesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesRouter.swift; sourceTree = "<group>"; };
 		F9C335372A7F041800152423 /* LaunchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesPresenter.swift; sourceTree = "<group>"; };
@@ -45,7 +44,6 @@
 		F9DC9DD32A7ED0F300164E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9DC9DD62A7ED0F300164E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9DC9DD82A7ED0F300164E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0FC7F0FB4EAE29D0295BAC /* Pods-SpaceX Launches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX Launches.release.xcconfig"; path = "Target Support Files/Pods-SpaceX Launches/Pods-SpaceX Launches.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +64,6 @@
 				53A49507B22493CF4A400B4C /* Pods_SpaceX_Launches.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5278040A605CD2FAC9AB7B5D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				769B6335C4DCB88CABC8D370 /* Pods-SpaceX Launches.debug.xcconfig */,
-				FA0FC7F0FB4EAE29D0295BAC /* Pods-SpaceX Launches.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		F9C3352C2A7EF66A00152423 /* Launches */ = {
@@ -146,7 +135,6 @@
 			children = (
 				F9DC9DC92A7ED0F200164E34 /* SpaceX Launches */,
 				F9DC9DC82A7ED0F200164E34 /* Products */,
-				5278040A605CD2FAC9AB7B5D /* Pods */,
 				2C3C3182F87E00C2677CC75B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -434,7 +422,6 @@
 		};
 		F9DC9DDC2A7ED0F300164E34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 769B6335C4DCB88CABC8D370 /* Pods-SpaceX Launches.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,7 +449,6 @@
 		};
 		F9DC9DDD2A7ED0F300164E34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA0FC7F0FB4EAE29D0295BAC /* Pods-SpaceX Launches.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

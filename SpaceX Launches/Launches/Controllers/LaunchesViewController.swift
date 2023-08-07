@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LaunchesViewControllerProtocol {
+    func showLaunces(_ launches: LaunchesModel.FetchLaunches.ViewModel)
+}
+
 class LaunchesViewController: UIViewController {
     var interactor: LaunchesInteractorProtocol!
     var router: LaunchesRouterProtocol!

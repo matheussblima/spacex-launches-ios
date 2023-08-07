@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol LaunchesInteractorProtocol {
+    func getLaunches()
+}
+
 class LaunchesInteractor {
     var presenter: LaunchesPresenterProtocol!
     let worker: LaunchesWorker = LaunchesWorker()
