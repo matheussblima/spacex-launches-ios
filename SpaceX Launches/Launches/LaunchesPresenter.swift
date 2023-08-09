@@ -28,9 +28,9 @@ class LaunchesPresenter {
 extension LaunchesPresenter: LaunchesPresenterProtocol {
     func showResults(_ launchesResponse: LaunchesModel.FetchLaunches.Response) {
         guard let launches = launchesResponse.launches else {
-            return self.viewController.showLaunces(LaunchesModel.FetchLaunches.ViewModel(isSuccess: false, errorMessage: ""))
+            return self.viewController.showError(LaunchesModel.FetchLaunches.ViewModelError(error: launchesResponse.error?.localizedDescription ?? "Unexpected error"))
         }
     
-        self.viewController.showLaunces(LaunchesModel.FetchLaunches.ViewModel(isSuccess: true, Launches: mapLaunches(lauches: launches)))
+        self.viewController.showLaunces(LaunchesModel.FetchLaunches.ViewModel(Launches: mapLaunches(lauches: launches)))
     }
 }

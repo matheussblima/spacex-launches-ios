@@ -9,7 +9,7 @@ import UIKit
 
 protocol LaunchesViewControllerProtocol {
     func showLaunces(_ launches: LaunchesModel.FetchLaunches.ViewModel)
-    func showError(_ launches: LaunchesModel.FetchLaunches.ViewModel)
+    func showError(_ error: LaunchesModel.FetchLaunches.ViewModelError)
 }
 
 class LaunchesViewController: UIViewController {
@@ -78,6 +78,7 @@ extension LaunchesViewController {
         search.searchBar.tintColor = .white
         search.searchBar.searchTextField.backgroundColor = .white
         search.searchBar.placeholder = "Launches search"
+        search.searchResultsUpdater = self
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -119,11 +120,20 @@ extension LaunchesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension LaunchesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        print(text)
+    }
+}
+
 extension LaunchesViewController: LaunchesViewControllerProtocol {
-    func showError(_ launches: LaunchesModel.FetchLaunches.ViewModel) {}
+    func showError(_ error: LaunchesModel.FetchLaunches.ViewModelError) {
+        print(error)
+    }
     
     func showLaunces(_ launchesViewModel: LaunchesModel.FetchLaunches.ViewModel) {
-        launches = launchesViewModel.Launches ?? []
+        launches = launchesViewModel.Launches
         launchesCollectionView.reloadData()
     }
 }

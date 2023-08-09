@@ -17,10 +17,12 @@ struct LaunchesModel {
          }
          
          struct ViewModel {
-             var isSuccess: Bool
-             var errorMessage: String?
-             var Launches: [LaunchMapped]?
+             var Launches: [LaunchMapped]
          }
+        
+        struct ViewModelError {
+            var error: String
+        }
      }
 }
 
