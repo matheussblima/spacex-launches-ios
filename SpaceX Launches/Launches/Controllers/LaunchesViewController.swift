@@ -9,9 +9,13 @@ import UIKit
 
 protocol LaunchesViewControllerProtocol {
     func showLaunces(_ launches: LaunchesModel.FetchLaunches.ViewModel)
+    func showError(_ launches: LaunchesModel.FetchLaunches.ViewModel)
 }
 
 class LaunchesViewController: UIViewController {
+    let MINIMUM_SPACING = 20.0
+    let NUMBER_OF_COLUMNS = 2.0
+    
     var launches: [LaunchMapped] = []
     
     var interactor: LaunchesInteractorProtocol!
@@ -22,8 +26,8 @@ class LaunchesViewController: UIViewController {
     init() {
         let layoutFlow = UICollectionViewFlowLayout()
         layoutFlow.scrollDirection = .vertical
-        layoutFlow.minimumLineSpacing = 20
-        layoutFlow.minimumInteritemSpacing = 20
+        layoutFlow.minimumLineSpacing = MINIMUM_SPACING
+        layoutFlow.minimumInteritemSpacing = MINIMUM_SPACING
         launchesCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layoutFlow)
         
         super.init(nibName: nil, bundle: nil)
@@ -43,12 +47,13 @@ class LaunchesViewController: UIViewController {
 
 extension LaunchesViewController {
     func initialSetup() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemIndigo
         
         self.interactor.getLaunches()
         navigationSetup()
         
         launchesCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        launchesCollectionView.backgroundColor = .white
         launchesCollectionView.dataSource = self
         launchesCollectionView.delegate = self
         launchesCollectionView.register(LaunchesCellView.self, forCellWithReuseIdentifier: LaunchesCellView.identification)
@@ -67,9 +72,31 @@ extension LaunchesViewController {
     
     func navigationSetup() {
         title = Constants.appName
+        
+        let search = UISearchController(searchResultsController: nil)
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.tintColor = .white
+        search.searchBar.searchTextField.backgroundColor = .white
+        search.searchBar.barTintColor = .black
+        search.searchBar.searchBarStyle = .minimal
+        search.searchBar.placeholder = "Launches search"
+        
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .systemIndigo
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationItem.searchController = search
+        navigationController?.navigationItem.searchController = search
     }
 }
+
 
 extension LaunchesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,13 +115,15 @@ extension LaunchesViewController: UICollectionViewDataSource {
 
 extension LaunchesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = (view.frame.width - 20) / 2
+        let size = (view.frame.width - MINIMUM_SPACING) / NUMBER_OF_COLUMNS
         
         return CGSize.init(width: size, height: size)
     }
 }
 
 extension LaunchesViewController: LaunchesViewControllerProtocol {
+    func showError(_ launches: LaunchesModel.FetchLaunches.ViewModel) {}
+    
     func showLaunces(_ launchesViewModel: LaunchesModel.FetchLaunches.ViewModel) {
         launches = launchesViewModel.Launches ?? []
         launchesCollectionView.reloadData()
