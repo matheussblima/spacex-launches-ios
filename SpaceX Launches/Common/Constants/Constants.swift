@@ -9,6 +9,8 @@ import Foundation
 
 struct Constants {
     static let appName = "SpaceX Launches"
+    static let searchPlaceholder = "Launches search"
+    static let unexpectedError = "Unexpected error"
     struct API {
        static let baseUrl = "https://api.spacexdata.com/v3"
        static var launches = "\(baseUrl)/launches"
