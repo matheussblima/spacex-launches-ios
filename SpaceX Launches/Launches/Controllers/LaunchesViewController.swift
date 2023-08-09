@@ -77,8 +77,6 @@ extension LaunchesViewController {
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.tintColor = .white
         search.searchBar.searchTextField.backgroundColor = .white
-        search.searchBar.barTintColor = .black
-        search.searchBar.searchBarStyle = .minimal
         search.searchBar.placeholder = "Launches search"
         
         navigationController?.navigationBar.prefersLargeTitles = true
