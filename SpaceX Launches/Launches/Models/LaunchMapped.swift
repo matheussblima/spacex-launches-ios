@@ -9,7 +9,7 @@ import Foundation
 
 struct LaunchMapped {
     var flightNumber: Int
-    var name: String?
+    var name: String
     var date: String
     var image: String?
 }

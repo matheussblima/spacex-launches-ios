@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LaunchesPresenterProtocol {
-    func showResults(_ launches: LaunchesModel.FetchLaunches.Response)
+    func showResults(_ launchesResponse: LaunchesModel.FetchLaunches.Response)
+    func showResultsFiltered(_ launchesResponse: LaunchesModel.FetchLaunches.Response)
 }
 
 class LaunchesPresenter {
@@ -26,6 +27,14 @@ class LaunchesPresenter {
 }
 
 extension LaunchesPresenter: LaunchesPresenterProtocol {
+    func showResultsFiltered(_ launchesResponse: LaunchesModel.FetchLaunches.Response) {
+        guard let launches = launchesResponse.launches else {
+            return self.viewController.showLaunces(LaunchesModel.FetchLaunches.ViewModel(Launches: []))
+        }
+        
+        self.viewController.showLaunces(LaunchesModel.FetchLaunches.ViewModel(Launches: mapLaunches(lauches: launches)))
+    }
+    
     func showResults(_ launchesResponse: LaunchesModel.FetchLaunches.Response) {
         guard let launches = launchesResponse.launches else {
             return self.viewController.showError(LaunchesModel.FetchLaunches.ViewModelError(error: launchesResponse.error?.localizedDescription ?? Constants.unexpectedError))

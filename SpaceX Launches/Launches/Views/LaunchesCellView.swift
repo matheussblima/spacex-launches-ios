@@ -31,9 +31,8 @@ class LaunchesCellView: UICollectionViewCell {
             self.image.sd_setImage(with: URL(string: image))
         }
         
-        if let name = item.name {
-            self.label.text = name
-        }
+        self.label.text = item.name
+        
     }
 }
 
