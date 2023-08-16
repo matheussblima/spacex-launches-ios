@@ -13,7 +13,10 @@ class LaunchesCellView: UICollectionViewCell {
     
     let container = UIStackView()
     var image = UIImageView()
+    var tapGestureRecognizer = UITapGestureRecognizer()
     var label = UILabel()
+    
+    var tapCell: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,6 +47,11 @@ extension LaunchesCellView {
         container.alignment = .center
         
         label.font = UIFont.preferredFont(forTextStyle: .title2)
+        
+        container.addGestureRecognizer(tapGestureRecognizer)
+        
+        tapGestureRecognizer.addTarget(self, action: #selector(containerTap))
+        
     }
     
     func layout() {
@@ -57,5 +65,15 @@ extension LaunchesCellView {
             trailingAnchor.constraint(equalToSystemSpacingAfter: container.trailingAnchor, multiplier: 2),
             container.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+}
+
+extension LaunchesCellView {
+    @objc func containerTap() {
+        container.alpha = 0.5
+        UIView.animate(withDuration: 0.5) {
+            self.container.alpha = 1
+        }
+        tapCell?()
     }
 }
