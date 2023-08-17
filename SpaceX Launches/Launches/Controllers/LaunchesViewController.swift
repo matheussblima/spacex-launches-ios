@@ -19,7 +19,7 @@ class LaunchesViewController: UIViewController {
     var launches: [LaunchMapped] = []
     
     var interactor: LaunchesInteractorProtocol!
-    var router: LaunchesRouterProtocol!
+    var router: LaunchesRouterProtocol?
     
     let launchesCollectionView: UICollectionView
     

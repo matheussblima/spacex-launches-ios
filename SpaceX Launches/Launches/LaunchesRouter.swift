@@ -12,7 +12,7 @@ protocol LaunchesRouterProtocol {
 }
 
 class LaunchesRouter {
-    weak var viewController: LaunchesViewController!
+    weak var viewController: LaunchesViewController?
 }
 
 extension LaunchesRouter: LaunchesRouterProtocol {

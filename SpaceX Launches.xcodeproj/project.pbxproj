@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8EC986A00B80B44996F9BF97 /* Pods_SpaceX_Launches.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A49507B22493CF4A400B4C /* Pods_SpaceX_Launches.framework */; };
+		F9698E302A8E552E004665A0 /* LaunchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E2F2A8E552E004665A0 /* LaunchConfigurator.swift */; };
+		F9698E322A8E553D004665A0 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E312A8E553D004665A0 /* LaunchPresenter.swift */; };
+		F9698E342A8E5553004665A0 /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E332A8E5553004665A0 /* LaunchInteractor.swift */; };
+		F9698E362A8E5563004665A0 /* LaunchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E352A8E5563004665A0 /* LaunchWorker.swift */; };
+		F9698E382A8E5579004665A0 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E372A8E5579004665A0 /* LaunchRouter.swift */; };
+		F9698E3D2A8E55B1004665A0 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9698E3C2A8E55B1004665A0 /* LaunchViewController.swift */; };
 		F9C335332A7EF81C00152423 /* LaunchesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335322A7EF81C00152423 /* LaunchesConfigurator.swift */; };
 		F9C335362A7F03F000152423 /* LaunchesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335352A7F03F000152423 /* LaunchesRouter.swift */; };
 		F9C335382A7F041800152423 /* LaunchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C335372A7F041800152423 /* LaunchesPresenter.swift */; };
@@ -30,6 +36,12 @@
 		162896928D687880642C0647 /* Pods-SpaceX Launches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX Launches.release.xcconfig"; path = "Target Support Files/Pods-SpaceX Launches/Pods-SpaceX Launches.release.xcconfig"; sourceTree = "<group>"; };
 		53A49507B22493CF4A400B4C /* Pods_SpaceX_Launches.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX_Launches.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F882207A7DD6E7F65EC078E5 /* Pods-SpaceX Launches.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX Launches.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX Launches/Pods-SpaceX Launches.debug.xcconfig"; sourceTree = "<group>"; };
+		F9698E2F2A8E552E004665A0 /* LaunchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchConfigurator.swift; sourceTree = "<group>"; };
+		F9698E312A8E553D004665A0 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		F9698E332A8E5553004665A0 /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
+		F9698E352A8E5563004665A0 /* LaunchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWorker.swift; sourceTree = "<group>"; };
+		F9698E372A8E5579004665A0 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
+		F9698E3C2A8E55B1004665A0 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F9C335322A7EF81C00152423 /* LaunchesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesConfigurator.swift; sourceTree = "<group>"; };
 		F9C335352A7F03F000152423 /* LaunchesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesRouter.swift; sourceTree = "<group>"; };
 		F9C335372A7F041800152423 /* LaunchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesPresenter.swift; sourceTree = "<group>"; };
@@ -77,6 +89,43 @@
 				162896928D687880642C0647 /* Pods-SpaceX Launches.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9698E2E2A8E5331004665A0 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F9698E3B2A8E5595004665A0 /* Models */,
+				F9698E3A2A8E558E004665A0 /* Views */,
+				F9698E392A8E5587004665A0 /* Controllers */,
+				F9698E372A8E5579004665A0 /* LaunchRouter.swift */,
+				F9698E2F2A8E552E004665A0 /* LaunchConfigurator.swift */,
+				F9698E352A8E5563004665A0 /* LaunchWorker.swift */,
+				F9698E312A8E553D004665A0 /* LaunchPresenter.swift */,
+				F9698E332A8E5553004665A0 /* LaunchInteractor.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		F9698E392A8E5587004665A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9698E3C2A8E55B1004665A0 /* LaunchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9698E3A2A8E558E004665A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9698E3B2A8E5595004665A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F9C3352C2A7EF66A00152423 /* Launches */ = {
@@ -167,6 +216,7 @@
 			children = (
 				F9C335402A7F133700152423 /* Models */,
 				F9C335432A7F1ADF00152423 /* Common */,
+				F9698E2E2A8E5331004665A0 /* Launch */,
 				F9C3352C2A7EF66A00152423 /* Launches */,
 				F9DC9DCA2A7ED0F200164E34 /* AppDelegate.swift */,
 				F9DC9DCC2A7ED0F200164E34 /* SceneDelegate.swift */,
@@ -294,17 +344,23 @@
 				F9C335332A7EF81C00152423 /* LaunchesConfigurator.swift in Sources */,
 				F9C335462A7F1B2400152423 /* Constants.swift in Sources */,
 				F9C3353D2A7F0F2900152423 /* LaunchesViewModel.swift in Sources */,
+				F9698E322A8E553D004665A0 /* LaunchPresenter.swift in Sources */,
+				F9698E362A8E5563004665A0 /* LaunchWorker.swift in Sources */,
+				F9698E302A8E552E004665A0 /* LaunchConfigurator.swift in Sources */,
 				F9C335422A7F135200152423 /* Launch.swift in Sources */,
 				F9C3353F2A7F100600152423 /* LaunchesWorker.swift in Sources */,
 				F9C3354A2A7FAFB100152423 /* LaunchMapped.swift in Sources */,
 				F9DC9DCF2A7ED0F200164E34 /* LaunchesViewController.swift in Sources */,
 				F9C335482A7F946A00152423 /* DataError.swift in Sources */,
+				F9698E3D2A8E55B1004665A0 /* LaunchViewController.swift in Sources */,
 				F9C335362A7F03F000152423 /* LaunchesRouter.swift in Sources */,
 				F9DC9DCB2A7ED0F200164E34 /* AppDelegate.swift in Sources */,
 				F9C3353A2A7F044F00152423 /* LaunchesInteractor.swift in Sources */,
 				F9C335512A817BD300152423 /* LaunchesCellView.swift in Sources */,
 				F9DC9DCD2A7ED0F200164E34 /* SceneDelegate.swift in Sources */,
 				F9C335382A7F041800152423 /* LaunchesPresenter.swift in Sources */,
+				F9698E342A8E5553004665A0 /* LaunchInteractor.swift in Sources */,
+				F9698E382A8E5579004665A0 /* LaunchRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
