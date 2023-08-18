@@ -12,7 +12,8 @@ struct Constants {
     static let searchPlaceholder = "Launches search"
     static let unexpectedError = "Unexpected error"
     struct API {
-       static let baseUrl = "https://api.spacexdata.com/v3"
-       static var launches = "\(baseUrl)/launches"
+        static let baseUrl = "https://api.spacexdata.com/v3"
+        static var launches = "\(baseUrl)/launches"
+        static var launch: (_ flightNumber: Int) -> String = { "\(baseUrl)/launches/\($0)" }
     }
 }
